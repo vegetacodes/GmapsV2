@@ -1,0 +1,30 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Title:</b>
+  <%= @issue.title %>
+</p>
+
+<p>
+  <b>Description:</b>
+  <%= @issue.description %>
+</p>
+
+<p>
+  <b>Longitude:</b>
+  <%= @issue.longitude %>
+</p>
+
+<p>
+  <b>Latitude:</b>
+  <%= @issue.latitude %>
+</p>
+
+<p>
+  <b>Address:</b>
+  <%= @issue.address %>
+</p>
+
+
+<%= link_to 'Edit', edit_issue_path(@issue) %> |
+<%= link_to 'Back', issues_path %>
