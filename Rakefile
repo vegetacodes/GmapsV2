@@ -4,4 +4,4 @@
 
 require File.expand_path('../config/application', __FILE__)
 
-MyGmaps::Application.load_tasks
+Gmapsv2::Application.load_tasks

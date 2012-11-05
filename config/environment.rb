@@ -2,4 +2,4 @@
 require File.expand_path('../application', __FILE__)
 
 # Initialize the rails application
-MyGmaps::Application.initialize!
+Gmapsv2::Application.initialize!

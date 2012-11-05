@@ -1,4 +1,4 @@
-MyGmaps::Application.routes.draw do
+Gmapsv2::Application.routes.draw do
   root :to => 'issues#index'
   resources :issues
 
