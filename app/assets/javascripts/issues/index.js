@@ -38,7 +38,7 @@ function showMap(coords) {
 	var googleLatAndLong = new google.maps.LatLng(coords.latitude, 
 												  coords.longitude);
 	var mapOptions = {
-		zoom: 10,
+		zoom: 8,
 		center: googleLatAndLong,
 		mapTypeId: google.maps.MapTypeId.ROADMAP
 	};
@@ -49,8 +49,9 @@ function showMap(coords) {
 
  
     //public art data KMZ
-    var kmzLayer2 = new google.maps.KmlLayer('http://data.cabq.gov/community/art/publicart/PublicArt.kmz');
+    var kmzLayer2 = new google.maps.KmlLayer('http://data.cabq.gov/community/reghistplaces/RegisteredHistoricPlaces.kmz');
     kmzLayer2.setMap(map);
+
 
 	// add the user marker
 	var title = "Your Location";
