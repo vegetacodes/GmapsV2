@@ -8,6 +8,7 @@ var ourCoords =  {
 
 window.onload = getMyLocation;
 
+
 function getMyLocation() {
 	if (navigator.geolocation) {
 
@@ -43,7 +44,14 @@ function showMap(coords) {
 	};
 	var mapDiv = document.getElementById("map");
 	map = new google.maps.Map(mapDiv, mapOptions);
+    var kmzLayer = new google.maps.KmlLayer('http://data.cabq.gov/government/citylimits/abqcitylimits.kmz');
+    kmzLayer.setMap(map);
 
+/*    
+    //public art data KMZ
+    var kmzLayer2 = new google.maps.KmlLayer('http://data.cabq.gov/community/art/publicart/PublicArt.kmz');
+    kmzLayer2.setMap(map);
+*/
 	// add the user marker
 	var title = "Your Location";
 	var content = "You are here: " + coords.latitude + ", " + coords.longitude;
@@ -87,3 +95,4 @@ function displayError(error) {
 	var div = document.getElementById("location");
 	div.innerHTML = errorMessage;
 }
+
